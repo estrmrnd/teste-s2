@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
 
 
 *{
@@ -39,6 +38,11 @@ section.menu{
     gap: 10px;
 }
 
+.menu__list a{
+    text-decoration: none;
+    color: black;
+}
+
 .icons{
     display: flex;
     gap: 0.75rem;
@@ -59,6 +63,7 @@ section.menu{
     grid-template-columns: repeat(2, 0fr);
     gap: 10px;
     justify-content: center;
+    padding: 20px;
 }
 
 .vitrine{
@@ -95,14 +100,6 @@ p{
         font-size: 0.875rem;
         padding: 0;
     }
-
-    /* section.menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: #ffff;
-        height: 100vh;
-    } */
     
     .menu__title{
         font-size: 0.875rem;

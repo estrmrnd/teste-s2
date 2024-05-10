@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://kit.fontawesome.com/1877c96d5d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
+
     <title>Teste S2</title>
 </head>
+
 <body>
     <!-- MENU -->
     <section class="menu">
@@ -20,6 +27,11 @@
                 <li class="menu__list__item"><a href="#loremipsum">Lorem ipsum</a></li>
                 <li class="menu__list__item"><a href="#loremipsum">Lorem ipsum</a></li>
                 <li class="menu__list__item"><a href="#loremipsum">Lorem ipsum</a></li>
+                <div class="icons">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
             </ul>
         </nav>
     </section>
@@ -30,12 +42,12 @@
 
         <div class="banner__principal"></div>
 
-        <ul class="banner__secundario">            
-            <img class="banner__secundario__item" src="assets/banner-meio-400-400.jpg">
-            <img class="banner__secundario__item" src="assets/banner-meio-400-400-verde.jpg">
-            <img class="banner__secundario__item" src="assets/banner-meio-400-400-verde.jpg">
-            <img class="banner__secundario__item" src="assets/banner-meio-400-400.jpg">
-        </ul>
+        <div class="banner__secundario">
+            <div><img class="banner__secundario__item" src="assets/banner-meio-400-400.jpg"></div>
+            <div><img class="banner__secundario__item" src="assets/banner-meio-400-400-verde.jpg"></div>
+            <div><img class="banner__secundario__item" src="assets/banner-meio-400-400-verde.jpg"></div>
+            <div><img class="banner__secundario__item" src="assets/banner-meio-400-400.jpg"></div>
+        </div>
     </div>
 
 
@@ -45,13 +57,33 @@
         <div class="carrossel" alt="produtos" data-lista></div>
 
         <h2 class="vitrire__title">Lorem ipsum</h2>
-        <p class="vitrine__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum libero et ultrices mattis. Morbi bibendum nulla at ante ullamcorper, et lacinia risus placerat. Vivamus ac arcu ac elit posuere posuere. Aliquam erat volutpat. Sed et luctus tortor. Aliquam erat volutpat. Cras posuere erat auctor ultricies malesuada. Mauris at felis nec ligula ultricies pellentesque nec ut elit. In dictum ante sit amet sem tristique, eget fringilla elit vehicula. Suspendisse potenti. Aenean at feugiat justo. Nullam porta odio nec augue molestie, vel varius dui varius.</p>
+        <p class="vitrine__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum libero et
+            ultrices mattis. Morbi bibendum nulla at ante ullamcorper, et lacinia risus placerat. Vivamus ac arcu ac
+            elit posuere posuere. Aliquam erat volutpat. Sed et luctus tortor. Aliquam erat volutpat. Cras posuere erat
+            auctor ultricies malesuada. Mauris at felis nec ligula ultricies pellentesque nec ut elit. In dictum ante
+            sit amet sem tristique, eget fringilla elit vehicula. Suspendisse potenti. Aenean at feugiat justo. Nullam
+            porta odio nec augue molestie, vel varius dui varius.</p>
     </div>
 
-    <script src="./js/mostrarProdutos.js" type="module"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/carrossel.js"></script>
 
-    
+    <script type="module">
+        import { mostrarProduto } from './js/mostrarProdutos.js';
+
+        await mostrarProduto.listaProdutos();
+
+        
+        $(document).ready(function () {
+            mostrarProduto.prepareCarousel('.carrossel');
+        });
+        
+    </script>
+    <script type="text/javascript">
+    </script>
+
+
 </body>
+
 </html>
