@@ -22,19 +22,19 @@ async function listaProdutos() {
 
 function prepareCarousel(selector) {
     $(selector).slick({
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 300,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: false
                 }
             },
             {
